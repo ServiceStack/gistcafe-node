@@ -29,10 +29,10 @@ class Inspect {
     }
 
     static dumpTable(rows) {
-        if (Array.isArray(rows)) {
-            return AsciiTable.factory({ rows });
-        }
-        return AsciiTable.factory(rows);
+        let table = Array.isArray(rows)
+            ? AsciiTable.factory({ rows })
+            : AsciiTable.factory(rows);
+        return table.toString();
     }
 
     static printDumpTable(rows) {
