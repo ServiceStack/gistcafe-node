@@ -1,0 +1,22 @@
+{
+  "name": "gistcafe",
+  "description": "gist.cafe utils",
+  "homepage": "https://github.com/ServiceStack/gistcafe-node",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "author": "ServiceStack, Inc. (https://servicestack.net)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ServiceStack/gistcafe-node.git"
+  },
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "servicestack",
+    "gist.cafe",
+    "inspect",
+    "utils"
+  ]
+}
