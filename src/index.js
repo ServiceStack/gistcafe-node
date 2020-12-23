@@ -3,6 +3,33 @@ const fs = require('fs');
 const path = require('path');
 const AsciiTable = require('./AsciiTable');
 
+
+function allKeys(rows) {
+    let to = [];
+    rows.forEach(o => {
+        for (let k in o) {
+            if (to.indexOf(k) >= 0) continue;
+            to.push(k);
+        }
+    });
+    console.log('allKeys', to)
+    return to;
+}
+
+function toRows(rows) {
+    let keys = allKeys(rows);
+    let to = [];
+    rows.forEach(o => {
+        let row = [];
+        to.push(row);
+        keys.forEach(k => {
+            row.push(o[k] || '');
+        });
+    });
+    console.log('toRows', to)
+    return to;
+}
+
 class Inspect {
     static vars(obj) {
         var inspectVarsPath = process.env.INSPECT_VARS;
@@ -30,7 +57,10 @@ class Inspect {
 
     static dumpTable(rows) {
         let table = Array.isArray(rows)
-            ? AsciiTable.factory({ rows })
+            ? AsciiTable.factory({
+                heading: allKeys(rows),
+                rows:    toRows(rows),
+            })
             : AsciiTable.factory(rows);
         return table.toString();
     }
