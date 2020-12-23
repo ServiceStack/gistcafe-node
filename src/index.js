@@ -12,7 +12,6 @@ function allKeys(rows) {
             to.push(k);
         }
     });
-    console.log('allKeys', to)
     return to;
 }
 
@@ -26,7 +25,6 @@ function toRows(rows) {
             row.push(o[k] || '');
         });
     });
-    console.log('toRows', to)
     return to;
 }
 
