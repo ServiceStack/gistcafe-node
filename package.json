@@ -2,7 +2,7 @@
   "name": "gistcafe",
   "description": "gist.cafe utils",
   "homepage": "https://github.com/ServiceStack/gistcafe-node",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "license": "BSD-3-Clause",
   "author": "ServiceStack, Inc. (https://servicestack.net)",
   "repository": {
