@@ -36,7 +36,7 @@ class Inspect {
     }
 
     static printDumpTable(rows) {
-        console.log(Inspect.dumpTable(obj));
+        console.log(Inspect.dumpTable(rows));
     }
 }
 
