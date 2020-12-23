@@ -4,8 +4,6 @@ const path = require('path');
 const AsciiTable = require('./AsciiTable');
 
 class Inspect {
-    static humanizeJson = true;
-
     static vars(obj) {
         var inspectVarsPath = process.env.INSPECT_VARS;
         if (!inspectVarsPath || !obj)
@@ -23,9 +21,7 @@ class Inspect {
 
     static dump(obj) {
         let to = JSON.stringify(obj, null, 4);
-        return Inspect.humanizeJson
-            ? to.replace(/"/g,'')
-            : to;
+        return to.replace(/"/g,'');
     }
 
     static printDump(obj) {
