@@ -584,7 +584,7 @@
     }
     
     /**
-     * Render an invdividual row
+     * Render an individual row
      *
      * @param {Array} row
      * @param {String} column seperator
