@@ -23,10 +23,10 @@ const fetch = require('node-fetch');
 
     orgRepos.sort((a, b) => b.watchers - a.watchers);
 
-    console.log(`Top 3 '${orgName}' Github Repos:`);
+    console.log(`Top 3 ${orgName} Github Repos:`);
     Inspect.printDump(orgRepos.slice(0, 3));
 
-    console.log(`\nTop 10 '${orgName}' Github Repos:`);
+    console.log(`\nTop 10 ${orgName} Github Repos:`);
     Inspect.printDumpTable(orgRepos.map(x => ({
         name: x.name, lang: x.lang, watchers: x.watchers, forks: x.forks
     })).slice(0, 10));
@@ -39,7 +39,7 @@ const fetch = require('node-fetch');
 Which outputs:
 
 ```
-Top 3 'nodejs' Github Repos:
+Top 3 nodejs Github Repos:
 [
     {
         name: node,
@@ -64,8 +64,8 @@ Top 3 'nodejs' Github Repos:
     }
 ]
 
-Top 10 'nodejs' Github Repos:
-.-----------------------------------------------------.
+Top 10 nodejs Github Repos:
++-----------------------------------------------------+
 |        name         |    lang    | watchers | forks |
 |---------------------|------------|----------|-------|
 | node                | JavaScript |    75551 | 18843 |
@@ -78,7 +78,7 @@ Top 10 'nodejs' Github Repos:
 | readable-stream     | JavaScript |      848 |   192 |
 | diagnostics         |            |      420 |    66 |
 | build               | Shell      |      308 |   132 |
-'-----------------------------------------------------'
++-----------------------------------------------------+
 ```
 
 Whilst `Inspect.vars()` lets you view variables in [gist.cafe](https://gist.cafe) viewer:

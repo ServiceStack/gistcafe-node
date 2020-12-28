@@ -60,6 +60,7 @@ class Inspect {
                 rows:    toRows(rows),
             })
             : AsciiTable.factory(rows);
+        table.setBorder('|','-','+','+');
         return table.toString();
     }
 
